@@ -14,6 +14,7 @@ const config: Config = {
         rose: '#C4847A',
         charcoal: '#2D2D2D',
         sage: '#8B9E7E',
+        amber: { 900: '#78350f', 700: '#b45309' },
       },
       fontFamily: {
         serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
