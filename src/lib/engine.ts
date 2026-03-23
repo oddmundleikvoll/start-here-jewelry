@@ -46,6 +46,10 @@ export function getPath(id: string) {
   return paths.find(p => p.id === id)
 }
 
+export function getPaths() {
+  return paths
+}
+
 export function getProductsForPath(pathId: string) {
   const mustHave = products.filter(p => p.path_id === pathId && p.category === 'must-have' && !p.avoid)
   const niceToHave = products.filter(p => p.path_id === pathId && p.category === 'nice-to-have' && !p.avoid)
