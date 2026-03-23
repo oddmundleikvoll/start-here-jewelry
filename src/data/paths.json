@@ -3,6 +3,7 @@
     {
       "id": "beading",
       "slug": "beading-starter",
+      "image": "/images/beading.jpg",
       "title": "Beading Starter",
       "tagline": "Lav terskel, rask mestring, rimelig inngang",
       "description": "Perfekt for deg som vil begynne enkelt og se resultater fort. Du lærer å sette sammen perler til øredobber, armbånd og enkle halskjeder.",
@@ -20,6 +21,7 @@
     {
       "id": "wire-wrapping",
       "slug": "wire-wrapping-starter",
+      "image": "/images/wire-wrapping.jpg",
       "title": "Wire Wrapping Starter",
       "tagline": "Mer «craft feel», fortsatt hjemmevennlig",
       "description": "For deg som vil ha mer håndverksfølelse. Du lærer å vikle wire rundt steiner og perler for å lage unike smykker med karakter.",
@@ -37,6 +39,7 @@
     {
       "id": "silver-curious",
       "slug": "silver-curious-starter",
+      "image": "/images/silver-curious.jpg",
       "title": "Silver-Curious Starter",
       "tagline": "For deg som vil mot sølv og metall — uten å satse alt",
       "description": "For deg som har et romantisk bilde av «ekte håndverk» og vil prøve sølv og metall, men ikke er klar for et dyrt kurs eller komplisert utstyr.",
