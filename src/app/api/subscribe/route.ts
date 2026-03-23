@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
   try {
     const { email } = await req.json();
@@ -14,6 +12,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "E-postsystemet er ikke konfigurert ennå. Sjekk tilbake snart!" },
+        { status: 503 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const { data, error } = await resend.contacts.create({
       audienceId: process.env.RESEND_AUDIENCE_ID!,
       email,

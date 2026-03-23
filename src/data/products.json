@@ -1,0 +1,234 @@
+{
+  "products": [
+    {
+      "id": "beading-mat",
+      "name": "Sølvmaling (beading mat)",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "79-149",
+      "why": "Holder perlene på plass mens du jobber. Fjerner frustrasjon.",
+      "avoid": false
+    },
+    {
+      "id": "beading-wire",
+      "name": "Beading wire 0.3mm",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "79-129",
+      "why": "Sterk nok for de fleste perler,myk nok til å jobbe med.",
+      "avoid": false
+    },
+    {
+      "id": "crimp-beads",
+      "name": "Crimp beads + klemmer",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "59-99",
+      "why": "Disse fester endene av smykkene dine.",
+      "avoid": false
+    },
+    {
+      "id": "earring-hooks",
+      "name": "Øredobbkroker (stål)",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "49-89",
+      "why": "8 par er standard pakke. Kjøp heller ikke sølv i starten.",
+      "avoid": false
+    },
+    {
+      "id": "beginner-beads",
+      "name": "Apatitt-perler (30 stk)",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "99-149",
+      "why": "Flotte farger, runde og enkle å træ. Perfekt for første prosjekt.",
+      "avoid": false
+    },
+    {
+      "id": "flat-nose-pliers",
+      "name": "Flattang (2 stk sett)",
+      "category": "must-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "149-249",
+      "why": "Du trenger to tang for å klemme crimps og justere.",
+      "avoid": false
+    },
+    {
+      "id": "beading-needle",
+      "name": "Beading nål",
+      "category": "nice-to-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "39-69",
+      "why": "Kun nødvendig hvis perlene har veldig små hull.",
+      "avoid": false
+    },
+    {
+      "id": "bead-board",
+      "name": "Perlebrett",
+      "category": "nice-to-have",
+      "path_id": "beading",
+      "price_band": "lav",
+      "price_nok": "99-149",
+      "why": "Hjelper med å måle armbånd og halskjeder.",
+      "avoid": false
+    },
+    {
+      "id": "jewelry-kit-complete",
+      "name": "Komplett nybegynnerkit med 100+ perler",
+      "category": "avoid",
+      "path_id": "beading",
+      "price_band": "middels",
+      "price_nok": "399-699",
+      "why": "For mange rare deler du aldri bruker. Kjøp heller målrettet.",
+      "avoid": true
+    },
+    {
+      "id": "fancy-tool-set",
+      "name": "30-dels verktøysett i koffert",
+      "category": "avoid",
+      "path_id": "beading",
+      "price_band": "høy",
+      "price_nok": "799+",
+      "why": "Altfor mye for første prosjekt. Du trenger 2 tang, ikke 30.",
+      "avoid": true
+    },
+    {
+      "id": "base-wire",
+      "name": "Verktøystål-wire 0.8mm",
+      "category": "must-have",
+      "path_id": "wire-wrapping",
+      "price_band": "lav",
+      "price_nok": "149-249",
+      "why": "Hovedmaterialet. Kjøp 2 ruller for å være trygg.",
+      "avoid": false
+    },
+    {
+      "id": "round-nose-pliers",
+      "name": "Rundtang",
+      "category": "must-have",
+      "path_id": "wire-wrapping",
+      "price_band": "middels",
+      "price_nok": "199-299",
+      "why": "Lager øyene som holder smykkene sammen.",
+      "avoid": false
+    },
+    {
+      "id": "flat-nose-wr",
+      "name": "Flattang (smal)",
+      "category": "must-have",
+      "path_id": "wire-wrapping",
+      "price_band": "middels",
+      "price_nok": "199-299",
+      "why": "For å vikle og justere wire.",
+      "avoid": false
+    },
+    {
+      "id": "stone-rough",
+      "name": "Rå stein pakke (mixed)",
+      "category": "must-have",
+      "path_id": "wire-wrapping",
+      "price_band": "lav",
+      "price_nok": "99-199",
+      "why": "Sentrum av wire wrapping-prosjektet.",
+      "avoid": false
+    },
+    {
+      "id": "chain-nose-pliers",
+      "name": "Kjedetang",
+      "category": "nice-to-have",
+      "path_id": "wire-wrapping",
+      "price_band": "middels",
+      "price_nok": "199-299",
+      "why": "Fint for å justere små viklinger.",
+      "avoid": false
+    },
+    {
+      "id": "sterling-silver-wire",
+      "name": "Sterling silver wire",
+      "category": "avoid",
+      "path_id": "wire-wrapping",
+      "price_band": "høy",
+      "price_nok": "499+",
+      "why": "For dyrt i starten. Lær med kopper eller forsølvet wire først.",
+      "avoid": true
+    },
+    {
+      "id": "flex-shaft",
+      "name": "Fleksibel aksel (Dremel-tilbehør)",
+      "category": "avoid",
+      "path_id": "wire-wrapping",
+      "price_band": "høy",
+      "price_nok": "499+",
+      "why": "Ikke nødvendig for de første 10 prosjektene.",
+      "avoid": true
+    },
+    {
+      "id": "stamping-kit",
+      "name": "Stempelverktøy sett",
+      "category": "must-have",
+      "path_id": "silver-curious",
+      "price_band": "middels",
+      "price_nok": "599-999",
+      "why": "Inkluderer hammer, stempel og slagpute. Alt du trenger for første prosjekt.",
+      "avoid": false
+    },
+    {
+      "id": "silver-sheet",
+      "name": "Sterling silver plate 15x15cm",
+      "category": "must-have",
+      "path_id": "silver-curious",
+      "price_band": "høy",
+      "price_nok": "399-599",
+      "why": "Nok til ca. 5-8 ringer eller 2-3 anheng.",
+      "avoid": false
+    },
+    {
+      "id": "half-round-pliers",
+      "name": "Halvrundtang",
+      "category": "must-have",
+      "path_id": "silver-curious",
+      "price_band": "middels",
+      "price_nok": "299-499",
+      "why": "For å bøye sølvet til riktig form.",
+      "avoid": false
+    },
+    {
+      "id": "ringMandrel",
+      "name": "Ring-sylinder",
+      "category": "must-have",
+      "path_id": "silver-curious",
+      "price_band": "lav",
+      "price_nok": "149-249",
+      "why": "Måler ringstørrelse og former ringene.",
+      "avoid": false
+    },
+    {
+      "id": "saw-blades",
+      "name": "Sagblader (pakke med 12)",
+      "category": "must-have",
+      "path_id": "silver-curious",
+      "price_band": "lav",
+      "price_nok": "99-149",
+      "why": "Du vil bruke disse mer enn du tror.",
+      "avoid": false
+    },
+    {
+      "id": "luxury-tool-kit",
+      "name": "Profesjonelt verktøysett 50+ deler",
+      "category": "avoid",
+      "path_id": "silver-curious",
+      "price_band": "høy",
+      "price_nok": "3000+",
+      "why": "For komplisert og dyrt for å starte med. Kjøp ett verktøy om gangen.",
+      "avoid": true
+    }
+  ]
+}
