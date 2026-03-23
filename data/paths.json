@@ -1,0 +1,23 @@
+[
+  {
+    "id": "beading",
+    "title": "Beading",
+    "description": "Lær å lage vakre smykker med perler og strenger. Perfekt for nybegynnere.",
+    "image": "/beading.jpg",
+    "products": [" Miyuki-perler", " Smykketraad", " Knutepinner"]
+  },
+  {
+    "id": "wire-wrapping",
+    "title": "Wire Wrapping",
+    "description": "Lær å lage smykker ved å vikle og forme wire. Kreativt og unikt.",
+    "image": "/wire-wrapping.jpg",
+    "products": [" Ståltråd", " Tenger", " Krystaller"]
+  },
+  {
+    "id": "silver-curious",
+    "title": "Sølvsmi",
+    "description": "Lær grunnleggende sølvsmiing og lag ditt eget sterling-sølv smykke.",
+    "image": "/silver-curious.jpg",
+    "products": [" Sterling-sølv", " Loddeutstyr", " Stempelverktøy"]
+  }
+]
