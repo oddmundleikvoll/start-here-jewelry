@@ -8,7 +8,8 @@
       "price_band": "lav",
       "price_nok": "79-149",
       "why": "Holder perlene på plass mens du jobber. Fjerner frustrasjon.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=beading+mat+jewelry+making"
     },
     {
       "id": "beading-wire",
@@ -18,7 +19,8 @@
       "price_band": "lav",
       "price_nok": "79-129",
       "why": "Sterk nok for de fleste perler,myk nok til å jobbe med.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=beading+wire+0.3mm"
     },
     {
       "id": "crimp-beads",
@@ -28,7 +30,8 @@
       "price_band": "lav",
       "price_nok": "59-99",
       "why": "Disse fester endene av smykkene dine.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=crimp+beads+jewelry+making"
     },
     {
       "id": "earring-hooks",
@@ -38,7 +41,8 @@
       "price_band": "lav",
       "price_nok": "49-89",
       "why": "8 par er standard pakke. Kjøp heller ikke sølv i starten.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=earring+hooks+stainless+steel"
     },
     {
       "id": "beginner-beads",
@@ -48,7 +52,8 @@
       "price_band": "lav",
       "price_nok": "99-149",
       "why": "Flotte farger, runde og enkle å træ. Perfekt for første prosjekt.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=apatite+beads+30pcs"
     },
     {
       "id": "flat-nose-pliers",
@@ -58,7 +63,8 @@
       "price_band": "lav",
       "price_nok": "149-249",
       "why": "Du trenger to tang for å klemme crimps og justere.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=flat+nose+pliers+jewelry"
     },
     {
       "id": "beading-needle",
@@ -68,7 +74,8 @@
       "price_band": "lav",
       "price_nok": "39-69",
       "why": "Kun nødvendig hvis perlene har veldig små hull.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=beading+needle"
     },
     {
       "id": "bead-board",
@@ -78,7 +85,8 @@
       "price_band": "lav",
       "price_nok": "99-149",
       "why": "Hjelper med å måle armbånd og halskjeder.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=bead+board+jewelry+making"
     },
     {
       "id": "jewelry-kit-complete",
@@ -108,7 +116,8 @@
       "price_band": "lav",
       "price_nok": "149-249",
       "why": "Hovedmaterialet. Kjøp 2 ruller for å være trygg.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=artistic+wire+18+gauge"
     },
     {
       "id": "round-nose-pliers",
@@ -118,7 +127,8 @@
       "price_band": "middels",
       "price_nok": "199-299",
       "why": "Lager øyene som holder smykkene sammen.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=round+nose+pliers+jewelry"
     },
     {
       "id": "flat-nose-wr",
@@ -128,7 +138,8 @@
       "price_band": "middels",
       "price_nok": "199-299",
       "why": "For å vikle og justere wire.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=flat+nose+pliers+narrow+jewelry"
     },
     {
       "id": "stone-rough",
@@ -138,7 +149,8 @@
       "price_band": "lav",
       "price_nok": "99-199",
       "why": "Sentrum av wire wrapping-prosjektet.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=raw+stones+wire+wrapping"
     },
     {
       "id": "chain-nose-pliers",
@@ -148,7 +160,8 @@
       "price_band": "middels",
       "price_nok": "199-299",
       "why": "Fint for å justere små viklinger.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=chain+nose+pliers+jewelry"
     },
     {
       "id": "sterling-silver-wire",
@@ -178,7 +191,8 @@
       "price_band": "middels",
       "price_nok": "599-999",
       "why": "Inkluderer hammer, stempel og slagpute. Alt du trenger for første prosjekt.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=metal+stamping+kit+jewelry"
     },
     {
       "id": "silver-sheet",
@@ -188,7 +202,8 @@
       "price_band": "høy",
       "price_nok": "399-599",
       "why": "Nok til ca. 5-8 ringer eller 2-3 anheng.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=sterling+silver+sheet+15x15cm"
     },
     {
       "id": "half-round-pliers",
@@ -198,7 +213,8 @@
       "price_band": "middels",
       "price_nok": "299-499",
       "why": "For å bøye sølvet til riktig form.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=half+round+pliers+jewelry"
     },
     {
       "id": "ringMandrel",
@@ -208,7 +224,8 @@
       "price_band": "lav",
       "price_nok": "149-249",
       "why": "Måler ringstørrelse og former ringene.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=ring+mandrel+jewelry"
     },
     {
       "id": "saw-blades",
@@ -218,7 +235,8 @@
       "price_band": "lav",
       "price_nok": "99-149",
       "why": "Du vil bruke disse mer enn du tror.",
-      "avoid": false
+      "avoid": false,
+      "affiliateUrl": "https://www.amazon.com/s?k=jewelry+saw+blades"
     },
     {
       "id": "luxury-tool-kit",

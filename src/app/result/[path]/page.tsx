@@ -120,6 +120,19 @@ export default function ResultPage() {
               <div>
                 <div className="font-medium text-charcoal">{p.name}</div>
                 <div className="text-sm text-charcoal/60 mt-0.5">{p.why}</div>
+                {p.affiliateUrl && (
+                  <a
+                    href={p.affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="inline-flex items-center gap-1 mt-2 text-sm text-rose hover:text-rose/80 font-medium transition-colors"
+                  >
+                    Kjøp på Amazon
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                      <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                )}
               </div>
               <div className="text-rose font-medium text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
             </div>
@@ -137,6 +150,19 @@ export default function ResultPage() {
                 <div>
                   <div className="font-medium text-charcoal">{p.name}</div>
                   <div className="text-sm text-charcoal/60 mt-0.5">{p.why}</div>
+                  {p.affiliateUrl && (
+                    <a
+                      href={p.affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="inline-flex items-center gap-1 mt-2 text-sm text-rose hover:text-rose/80 font-medium transition-colors"
+                    >
+                      Kjøp på Amazon
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                        <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
                 <div className="text-charcoal/40 text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
               </div>
@@ -155,6 +181,19 @@ export default function ResultPage() {
                 <div>
                   <div className="font-medium text-charcoal">{p.name}</div>
                   <div className="text-sm text-red-600/80 mt-0.5">{p.why}</div>
+                  {p.affiliateUrl && (
+                    <a
+                      href={p.affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="inline-flex items-center gap-1 mt-2 text-sm text-red-500 hover:text-red-600 font-medium transition-colors"
+                    >
+                      Sjekk på Amazon
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                        <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
                 <div className="text-red-400 text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
               </div>
