@@ -44,9 +44,12 @@ export default function PlanPage() {
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12">
-      <div className="mb-8">
+      <div className="flex justify-between items-center mb-8">
         <Link href={`/result/${path.slug}`} className="text-charcoal/40 text-sm hover:text-charcoal transition-colors">
           ← Tilbake til resultat
+        </Link>
+        <Link href={`/en/result/${path.slug}/plan`} className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
+          <span className="font-medium text-charcoal">NO</span> | EN
         </Link>
       </div>
 

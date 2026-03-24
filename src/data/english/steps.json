@@ -1,0 +1,67 @@
+{
+  "steps": [
+    {
+      "id": "budget",
+      "question": "What's your budget for tools and materials?",
+      "subtitle": "Choose what feels right for you right now.",
+      "options": [
+        { "value": "low", "label": "Under 500 kr", "description": "Easy and affordable entry" },
+        { "value": "medium", "label": "500–1500 kr", "description": "Good balance" },
+        { "value": "high", "label": "1500+ kr", "description": "Ready for a real investment" }
+      ]
+    },
+    {
+      "id": "what_to_make",
+      "question": "What would you most like to make?",
+      "subtitle": "Pick what appeals to you most right now.",
+      "options": [
+        { "value": "earrings", "label": "Earrings", "description": "Quick, easy, great for gifting" },
+        { "value": "bracelets", "label": "Bracelets", "description": "High visibility, great give-away" },
+        { "value": "necklaces", "label": "Necklaces", "description": "More time, more creative" },
+        { "value": "mixed", "label": "A bit of everything", "description": "I'll keep my options open" }
+      ]
+    },
+    {
+      "id": "speed",
+      "question": "How important is it to finish a piece quickly?",
+      "subtitle": "This determines how easy your first project will be.",
+      "options": [
+        { "value": "fast", "label": "Want to see results fast", "description": "30 min–1 hour is perfect" },
+        { "value": "medium", "label": "Some time is fine", "description": "1-2 hours is okay" },
+        { "value": "slow", "label": "Time with me is fine", "description": "I enjoy the process" }
+      ]
+    },
+    {
+      "id": "goal",
+      "question": "What's your goal with jewelry making?",
+      "subtitle": "This influences which path fits best.",
+      "options": [
+        { "value": "hobby", "label": "Relaxing hobby", "description": "Something I can do at home" },
+        { "value": "gifts", "label": "Make gifts", "description": "Beautiful, personal gifts for people I love" },
+        { "value": "sell", "label": "Sell a little", "description": "Something I can earn a bit on" },
+        { "value": "explore", "label": "Explore if this is for me", "description": "Want to try without committing" }
+      ]
+    },
+    {
+      "id": "time",
+      "question": "How much time do you have per week?",
+      "subtitle": "Be realistic. This is a marathon, not a sprint.",
+      "options": [
+        { "value": "under1", "label": "Under 1 hour", "description": "Short sessions are perfect" },
+        { "value": "1to3", "label": "1–3 hours", "description": "Good amount" },
+        { "value": "3plus", "label": "3+ hours", "description": "Can set aside good time" }
+      ]
+    },
+    {
+      "id": "fear",
+      "question": "What are you most afraid of?",
+      "subtitle": "We match you based on this too.",
+      "options": [
+        { "value": "wrong_stuff", "label": "Buying the wrong equipment", "description": "Don't want to waste money" },
+        { "value": "too_hard", "label": "It's too difficult", "description": "Not sure if I can manage it" },
+        { "value": "too_expensive", "label": "It'll be too expensive", "description": "Want to keep costs under control" },
+        { "value": "too_much_stuff", "label": "Too much equipment", "description": "Want it simple and minimal" }
+      ]
+    }
+  ]
+}

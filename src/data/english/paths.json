@@ -1,0 +1,58 @@
+{
+  "paths": [
+    {
+      "id": "beading",
+      "slug": "beading-starter",
+      "image": "/images/beading.jpg",
+      "title": "Beading Starter",
+      "tagline": "Low barrier, quick mastery, affordable entry",
+      "description": "Perfect for those who want to start simple and see results fast. You'll learn to assemble beads into earrings, bracelets, and simple necklaces.",
+      "target_user": "Women 25-45 who want a relaxing hobby without investing heavily right away.",
+      "difficulty": "low",
+      "budget_min": 0,
+      "budget_max": 500,
+      "time_commitment": "under 1 hour",
+      "style_tags": ["simple", "rhythmic", "hobby"],
+      "first_project": "Simple apatite bead earrings",
+      "est_time_first_project": "30-45 minutes",
+      "result_type": "A pair of earrings you can wear right away",
+      "why_this_path": "You chose a low budget, want quick mastery, and hobby is your goal. That's exactly where beading shines."
+    },
+    {
+      "id": "wire-wrapping",
+      "slug": "wire-wrapping-starter",
+      "image": "/images/wire-wrapping.jpg",
+      "title": "Wire Wrapping Starter",
+      "tagline": "More 'craft feel', still home-friendly",
+      "description": "For those who want more of a crafts feel. You learn to wrap wire around stones and beads to create unique jewelry with character.",
+      "target_user": "Creative people who like working with their hands and want to create something that feels personal and real.",
+      "difficulty": "medium",
+      "budget_min": 500,
+      "budget_max": 1500,
+      "time_commitment": "1-3 hours",
+      "style_tags": ["craft", "unique", "handmade"],
+      "first_project": "Wire-wrapped stone bracelet",
+      "est_time_first_project": "1-2 hours",
+      "result_type": "A bracelet with a unique stone you wrapped yourself",
+      "why_this_path": "You want more crafts feel, have a medium budget and a bit more time. Wire wrapping delivers that feeling."
+    },
+    {
+      "id": "silver-curious",
+      "slug": "silver-curious-starter",
+      "image": "/images/silver-curious.jpg",
+      "title": "Silver-Curious Starter",
+      "tagline": "For those who want to move toward silver and metal — without going all in",
+      "description": "For those who have a romantic picture of 'real craftsmanship' and want to try silver and metal, but aren't ready for an expensive course or complicated equipment.",
+      "target_user": "Those who envision a long-term jewelry journey and want to explore whether it's right for them.",
+      "difficulty": "medium-high",
+      "budget_min": 1500,
+      "budget_max": 9999,
+      "time_commitment": "3+ hours",
+      "style_tags": ["real", "lasting", "dream"],
+      "first_project": "Simple stamped silver ring",
+      "est_time_first_project": "2-3 hours",
+      "result_type": "A stamped silver ring you can wear every day",
+      "why_this_path": "You're ready for a real investment and a proper first project. Silver is the way."
+    }
+  ]
+}
