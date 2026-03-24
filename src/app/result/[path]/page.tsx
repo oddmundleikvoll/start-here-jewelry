@@ -43,6 +43,13 @@ export default function ResultPage() {
       }
       localStorage.setItem('jewelry-subscribed', 'true')
       setSubmitted(true)
+      // GA4: email capture success
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'email_capture', {
+          event_category: 'conversion',
+          path_slug: params.path,
+        })
+      }
     } catch {
       setError('Kunne ikke koble til. Prøv igjen.')
     } finally {

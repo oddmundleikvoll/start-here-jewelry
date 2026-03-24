@@ -18,6 +18,11 @@ export default function QuizPage() {
   const isLast = current === steps.length - 1
 
   function select(value: string) {
+    // GA4: quiz_start event on first question
+    if (current === 0 && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'quiz_start', { event_category: 'engagement' })
+    }
+
     const newAnswers = { ...answers, [step.id]: value }
     setAnswers(newAnswers)
 
@@ -25,6 +30,13 @@ export default function QuizPage() {
       const pathId = recommendPath(newAnswers as Answers)
       const matchingPath = paths.find(p => p.id === pathId)
       if (matchingPath) {
+        // GA4: quiz_complete event with path result
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'quiz_complete', {
+            event_category: 'engagement',
+            path_id: matchingPath.slug,
+          })
+        }
         router.push(`/result/${matchingPath.slug}?path=${matchingPath.slug}`)
       }
     } else {

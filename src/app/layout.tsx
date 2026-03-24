@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Start Here Jewelry | Finn riktig måte å starte smykkelaging på',
@@ -10,7 +11,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="no">
-      <body className="bg-cream text-charcoal antialiased">{children}</body>
+      <body className="bg-cream text-charcoal antialiased">
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=A7ehvQO5Q4meFoOyNYePtw"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-setup" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'A7ehvQO5Q4meFoOyNYePtw');
+          `}
+        </Script>
+      </body>
     </html>
   )
 }
