@@ -2,65 +2,65 @@
   "steps": [
     {
       "id": "budget",
-      "question": "Hva er ditt budsjett for utstyr og materialer?",
-      "subtitle": "Velg det som stemmer best for deg akkurat nå.",
+      "question": "What's your budget for tools and materials?",
+      "subtitle": "Choose what feels right for you right now.",
       "options": [
-        { "value": "low", "label": "Under 500 kr", "description": "Lett og rimelig inngang" },
-        { "value": "medium", "label": "500–1500 kr", "description": "God balanse" },
-        { "value": "high", "label": "1500+ kr", "description": "Klar for ordentlig investering" }
+        { "value": "low", "label": "Under 500 kr", "description": "Easy and affordable entry" },
+        { "value": "medium", "label": "500–1500 kr", "description": "Good balance" },
+        { "value": "high", "label": "1500+ kr", "description": "Ready for a real investment" }
       ]
     },
     {
       "id": "what_to_make",
-      "question": "Hva vil du aller helst lage?",
-      "subtitle": "Velg det som frister mest akkurat nå.",
+      "question": "What would you most like to make?",
+      "subtitle": "Pick what appeals to you most right now.",
       "options": [
-        { "value": "earrings", "label": "Øredobber", "description": "Raske, enkle, fine å gi bort" },
-        { "value": "bracelets", "label": "Armbånd", "description": "God synlighet, god give-alway" },
-        { "value": "necklaces", "label": "Halskjeder", "description": "Mer tid, mer kreativt" },
-        { "value": "mixed", "label": "Litt av alt", "description": "Vil holde meg åpen" }
+        { "value": "earrings", "label": "Earrings", "description": "Quick, easy, great for gifting" },
+        { "value": "bracelets", "label": "Bracelets", "description": "High visibility, great give-away" },
+        { "value": "necklaces", "label": "Necklaces", "description": "More time, more creative" },
+        { "value": "mixed", "label": "A bit of everything", "description": "I'll keep my options open" }
       ]
     },
     {
       "id": "speed",
-      "question": "Hvor viktig er det å få et ferdig smykke fort?",
-      "subtitle": "Dette avgjør hvor enkelt første prosjektet blir.",
+      "question": "How important is it to finish a piece quickly?",
+      "subtitle": "This determines how easy your first project will be.",
       "options": [
-        { "value": "fast", "label": "Vil se resultat fort", "description": "30 min–1 time er perfekt" },
-        { "value": "medium", "label": "Litt tid er ok", "description": "1-2 timer er greit" },
-        { "value": "slow", "label": "Lenge med meg er ok", "description": "Jeg liker prosessen" }
+        { "value": "fast", "label": "Want to see results fast", "description": "30 min–1 hour is perfect" },
+        { "value": "medium", "label": "Some time is fine", "description": "1-2 hours is okay" },
+        { "value": "slow", "label": "Time with me is fine", "description": "I enjoy the process" }
       ]
     },
     {
       "id": "goal",
-      "question": "Hva er målet ditt med smykkelaging?",
-      "subtitle": "Dette påvirker hvilket spor som passer best.",
+      "question": "What's your goal with jewelry making?",
+      "subtitle": "This influences which path fits best.",
       "options": [
-        { "value": "hobby", "label": "Avslappende hobby", "description": "Noe jeg kan holde på med hjemme" },
-        { "value": "gifts", "label": "Lage gaver", "description": "Fine, personlige gaver til folk jeg er glad i" },
-        { "value": "sell", "label": "Selge smått", "description": "Noe jeg kan tjene litt på" },
-        { "value": "explore", "label": "Utforske om dette er noe for meg", "description": "Vil prøve det uten å forplikte meg" }
+        { "value": "hobby", "label": "Relaxing hobby", "description": "Something I can do at home" },
+        { "value": "gifts", "label": "Make gifts", "description": "Beautiful, personal gifts for people I love" },
+        { "value": "sell", "label": "Sell a little", "description": "Something I can earn a bit on" },
+        { "value": "explore", "label": "Explore if this is for me", "description": "Want to try without committing" }
       ]
     },
     {
       "id": "time",
-      "question": "Hvor mye tid har du per uke?",
-      "subtitle": "Vær realistisk. Dette er en marathon, ikke en sprint.",
+      "question": "How much time do you have per week?",
+      "subtitle": "Be realistic. This is a marathon, not a sprint.",
       "options": [
-        { "value": "under1", "label": "Under 1 time", "description": "Korte økter er perfekt" },
-        { "value": "1to3", "label": "1–3 timer", "description": "God mengde" },
-        { "value": "3plus", "label": "3+ timer", "description": "Kan sette av god tid" }
+        { "value": "under1", "label": "Under 1 hour", "description": "Short sessions are perfect" },
+        { "value": "1to3", "label": "1–3 hours", "description": "Good amount" },
+        { "value": "3plus", "label": "3+ hours", "description": "Can set aside good time" }
       ]
     },
     {
       "id": "fear",
-      "question": "Hva er du mest redd for?",
-      "subtitle": "Vi matcher deg basert på dette også.",
+      "question": "What are you most afraid of?",
+      "subtitle": "We match you based on this too.",
       "options": [
-        { "value": "wrong_stuff", "label": "Kjøpe feil utstyr", "description": "Vil ikke kaste bort penger" },
-        { "value": "too_hard", "label": "Det er for vanskelig", "description": "Usikker på om jeg kan klare det" },
-        { "value": "too_expensive", "label": "Det blir for dyrt", "description": "Vil ha kontroll på kostnadene" },
-        { "value": "too_much_stuff", "label": "For mye utstyr", "description": "Vil ha det enkelt og minimalt" }
+        { "value": "wrong_stuff", "label": "Buying the wrong equipment", "description": "Don't want to waste money" },
+        { "value": "too_hard", "label": "It's too difficult", "description": "Not sure if I can manage it" },
+        { "value": "too_expensive", "label": "It'll be too expensive", "description": "Want to keep costs under control" },
+        { "value": "too_much_stuff", "label": "Too much equipment", "description": "Want it simple and minimal" }
       ]
     }
   ]

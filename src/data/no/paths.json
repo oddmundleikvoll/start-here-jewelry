@@ -1,0 +1,58 @@
+{
+  "paths": [
+    {
+      "id": "beading",
+      "slug": "beading-starter",
+      "image": "/images/beading.jpg",
+      "title": "Beading Starter",
+      "tagline": "Lav terskel, rask mestring, rimelig inngang",
+      "description": "Perfekt for deg som vil begynne enkelt og se resultater fort. Du lærer å sette sammen perler til øredobber, armbånd og enkle halskjeder.",
+      "target_user": "Kvinner 25-45 som vil ha en avslappende hobby uten å investere tungt med en gang.",
+      "difficulty": "lav",
+      "budget_min": 0,
+      "budget_max": 500,
+      "time_commitment": "under 1 time",
+      "style_tags": ["enkelt", "rytmisk", "hobby"],
+      "first_project": "Enkle øredobber med apatitt-perler",
+      "est_time_first_project": "30-45 minutter",
+      "result_type": "Et par øredobber du kan bruke med en gang",
+      "why_this_path": "Du valgte lavt budsjett, vil ha rask mestring, og hobby er målet ditt. Det er akkurat der beading skinner."
+    },
+    {
+      "id": "wire-wrapping",
+      "slug": "wire-wrapping-starter",
+      "image": "/images/wire-wrapping.jpg",
+      "title": "Wire Wrapping Starter",
+      "tagline": "Mer «craft feel», fortsatt hjemmevennlig",
+      "description": "For deg som vil ha mer håndverksfølelse. Du lærer å vikle wire rundt steiner og perler for å lage unike smykker med karakter.",
+      "target_user": "Kreative som liker å jobbe med hendene og vil lage noe som føles personlig og ekte.",
+      "difficulty": "middels",
+      "budget_min": 500,
+      "budget_max": 1500,
+      "time_commitment": "1-3 timer",
+      "style_tags": ["craft", "unikt", "håndverk"],
+      "first_project": "Wire-wrapped steinarmbånd",
+      "est_time_first_project": "1-2 timer",
+      "result_type": "Et armbånd med en unik stein du selv har viklet",
+      "why_this_path": "Du vil ha mer håndverksfølelse, har middels budsjett og har litt mer tid. Wire wrapping gir den følelsen."
+    },
+    {
+      "id": "silver-curious",
+      "slug": "silver-curious-starter",
+      "image": "/images/silver-curious.jpg",
+      "title": "Silver-Curious Starter",
+      "tagline": "For deg som vil mot sølv og metall — uten å satse alt",
+      "description": "For deg som har et romantisk bilde av «ekte håndverk» og vil prøve sølv og metall, men ikke er klar for et dyrt kurs eller komplisert utstyr.",
+      "target_user": "De som ser for seg et langvarig smykkereise og har lyst til å utforske om dette er noe for dem.",
+      "difficulty": "middels-høy",
+      "budget_min": 1500,
+      "budget_max": 9999,
+      "time_commitment": "3+ timer",
+      "style_tags": ["ekte", "varig", "drøm"],
+      "first_project": "Enkel sølvring med stempel",
+      "est_time_first_project": "2-3 timer",
+      "result_type": "En stemplet sølvring du kan ha på seg hver dag",
+      "why_this_path": "Du er klar for en ordentlig investering og et skikkelig første prosjekt. Sølv er veien."
+    }
+  ]
+}

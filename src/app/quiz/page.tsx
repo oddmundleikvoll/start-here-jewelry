@@ -3,14 +3,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import pathsData from '@/data/paths.json'
-import stepsData from '@/data/steps.json'
+import pathsData from '@/data/english/paths.json'
+import stepsData from '@/data/english/steps.json'
 import { Answers, recommendPath } from '@/lib/engine'
 
 const paths = (pathsData as any).paths as any[]
 const steps = (stepsData as any).steps as any[]
 
-export default function QuizPage() {
+export default function EnQuizPage() {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<Partial<Answers>>({})
   const router = useRouter()
@@ -19,7 +19,6 @@ export default function QuizPage() {
   const isLast = current === steps.length - 1
 
   function select(value: string) {
-    // GA4: quiz_start event on first question
     if (current === 0 && typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'quiz_start', { event_category: 'engagement' })
     }
@@ -31,7 +30,6 @@ export default function QuizPage() {
       const pathId = recommendPath(newAnswers as Answers)
       const matchingPath = paths.find(p => p.id === pathId)
       if (matchingPath) {
-        // GA4: quiz_complete event with path result
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'quiz_complete', {
             event_category: 'engagement',
@@ -51,11 +49,11 @@ export default function QuizPage() {
     <main className="min-h-screen flex flex-col px-6 py-10 max-w-xl mx-auto">
       <div className="mb-10">
         <div className="flex justify-end mb-4">
-          <Link href="/en/quiz" className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
-            <span className="font-medium text-charcoal">NO</span> | EN
+          <Link href="/no/quiz" className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
+            <span className="font-medium text-charcoal">EN</span> | NO
           </Link>
         </div>
-        <div className="text-sm text-rose font-medium mb-2">Spørsmål {current + 1} av {steps.length}</div>
+        <div className="text-sm text-rose font-medium mb-2">Question {current + 1} of {steps.length}</div>
         <div className="w-full h-1 bg-charcoal/10 rounded-full">
           <div className="h-1 bg-rose rounded-full transition-all" style={{ width: `${progress}%` }} />
         </div>
@@ -86,7 +84,7 @@ export default function QuizPage() {
           onClick={() => setCurrent(c => c - 1)}
           className="mt-10 text-charcoal/40 text-sm hover:text-charcoal transition-colors"
         >
-          ← Tilbake
+          ← Back
         </button>
       )}
     </main>

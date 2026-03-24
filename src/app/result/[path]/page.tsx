@@ -3,15 +3,15 @@
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import pathsData from '@/data/paths.json'
+import enPathsData from '@/data/english/paths.json'
 import { getProductsForPath, estimateCost } from '@/lib/engine'
 
-const paths = (pathsData as any).paths as any[]
+const enPaths = (enPathsData as any).paths as any[]
 
-export default function ResultPage() {
+export default function EnResultPage() {
   const searchParams = useSearchParams()
   const pathSlug = searchParams.get('path') || 'beading-starter'
-  const path = paths.find(p => p.slug === pathSlug) || paths[0]
+  const path = enPaths.find(p => p.slug === pathSlug) || enPaths[0]
   const { mustHave, niceToHave, avoid } = getProductsForPath(path.id)
   const cost = estimateCost(path.id)
 
@@ -38,12 +38,11 @@ export default function ResultPage() {
       })
       const data = await res.json()
       if (!res.ok) {
-        setError(data.error ?? 'Noe gikk galt.')
+        setError(data.error ?? 'Something went wrong.')
         return
       }
       localStorage.setItem('jewelry-subscribed', 'true')
       setSubmitted(true)
-      // GA4: email capture success
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'email_capture', {
           event_category: 'conversion',
@@ -51,7 +50,7 @@ export default function ResultPage() {
         })
       }
     } catch {
-      setError('Kunne ikke koble til. Prøv igjen.')
+      setError('Could not connect. Try again.')
     } finally {
       setLoading(false)
     }
@@ -65,13 +64,12 @@ export default function ResultPage() {
 
   return (
     <main className="min-h-screen max-w-3xl mx-auto px-6 py-12">
-      {/* Back link */}
       <div className="flex justify-between items-center mb-6">
         <Link href="/" className="text-charcoal/40 text-sm hover:text-charcoal transition-colors">
-          ← Tilbake
+          ← Back
         </Link>
-        <Link href={`/en/result/${path.slug}`} className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
-          <span className="font-medium text-charcoal">NO</span> | EN
+        <Link href={`/no/result/${path.slug}`} className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
+          <span className="font-medium text-charcoal">EN</span> | NO
         </Link>
       </div>
 
@@ -86,7 +84,7 @@ export default function ResultPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent flex items-end">
             <div className="p-8 w-full">
               <div className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-medium rounded-full mb-3 backdrop-blur-sm">
-                Ditt startspor
+                Your starting path
               </div>
               <h1 className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">
                 {path.title}
@@ -97,28 +95,28 @@ export default function ResultPage() {
         </div>
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose/10 text-rose rounded-full text-sm">
-            Estimert startkostnad: <strong>{cost}</strong>
+            Estimated start cost: <strong>{cost}</strong>
           </div>
         </div>
       </div>
 
       {/* Why this path */}
       <div className="bg-white rounded-2xl p-8 mb-8 border border-charcoal/5">
-        <h2 className="font-serif font-bold text-charcoal mb-3 text-lg">Hvorfor dette sporet?</h2>
+        <h2 className="font-serif font-bold text-charcoal mb-3 text-lg">Why this path?</h2>
         <p className="text-charcoal/70 leading-relaxed">{path.why_this_path}</p>
       </div>
 
       {/* First project */}
       <div className="bg-rose/5 rounded-2xl p-8 mb-8">
-        <h2 className="font-serif font-bold text-charcoal mb-2 text-lg">Første prosjekt</h2>
+        <h2 className="font-serif font-bold text-charcoal mb-2 text-lg">First project</h2>
         <div className="text-xl font-medium text-rose mb-2">{path.first_project}</div>
-        <div className="text-charcoal/60 text-sm">Forventet tid: {path.est_time_first_project}</div>
+        <div className="text-charcoal/60 text-sm">Expected time: {path.est_time_first_project}</div>
         <div className="mt-3 text-charcoal/70 text-sm">{path.result_type}</div>
       </div>
 
       {/* Must have */}
       <div className="mb-8">
-        <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Kjøp disse først</h2>
+        <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Buy these first</h2>
         <div className="space-y-3">
           {mustHave.map(p => (
             <div key={p.id} className="flex items-start justify-between bg-white rounded-xl px-5 py-4 border border-charcoal/5">
@@ -132,7 +130,7 @@ export default function ResultPage() {
                     rel="noopener noreferrer sponsored"
                     className="inline-flex items-center gap-1 mt-2 text-sm text-rose hover:text-rose/80 font-medium transition-colors"
                   >
-                    Kjøp på Amazon
+                    Buy on Amazon
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
                       <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
                     </svg>
@@ -148,7 +146,7 @@ export default function ResultPage() {
       {/* Nice to have */}
       {niceToHave.length > 0 && (
         <div className="mb-8">
-          <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Fint å ha (kan vente)</h2>
+          <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Nice to have (can wait)</h2>
           <div className="space-y-3">
             {niceToHave.map(p => (
               <div key={p.id} className="flex items-start justify-between bg-white rounded-xl px-5 py-4 border border-charcoal/5">
@@ -162,7 +160,7 @@ export default function ResultPage() {
                       rel="noopener noreferrer sponsored"
                       className="inline-flex items-center gap-1 mt-2 text-sm text-rose hover:text-rose/80 font-medium transition-colors"
                     >
-                      Kjøp på Amazon
+                      Buy on Amazon
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
                         <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
                       </svg>
@@ -179,7 +177,7 @@ export default function ResultPage() {
       {/* Avoid */}
       {avoid.length > 0 && (
         <div className="mb-8">
-          <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Ikke kjøp dette ennå</h2>
+          <h2 className="font-serif font-bold text-charcoal mb-4 text-lg">Don't buy these yet</h2>
           <div className="space-y-3">
             {avoid.map(p => (
               <div key={p.id} className="flex items-start justify-between bg-red-50 rounded-xl px-5 py-4 border border-red-100">
@@ -193,7 +191,7 @@ export default function ResultPage() {
                       rel="noopener noreferrer sponsored"
                       className="inline-flex items-center gap-1 mt-2 text-sm text-red-500 hover:text-red-600 font-medium transition-colors"
                     >
-                      Sjekk på Amazon
+                      Check on Amazon
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
                         <path fillRule="evenodd" d="M5 22h12a2 2 0 002-2V7.5L14.5 2H5a2 2 0 00-2 2v10a2 2 0 002 2z" clipRule="evenodd" />
                       </svg>
@@ -211,17 +209,17 @@ export default function ResultPage() {
       {!alreadySubscribed && !submitted && (
         <div className="bg-sage/10 rounded-2xl p-8 mb-8 text-center">
           <h3 className="font-serif font-bold text-charcoal text-xl mb-2">
-            Få 5 tips til ditt første smykkeprosjekt
+            Get 5 tips for your first jewelry project
           </h3>
           <p className="text-charcoal/60 text-sm mb-6">
-            Skrevet av noen som har laget samme feilene som deg.
+            Written by someone who's made the same mistakes as you.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="din@epost.no"
+              placeholder="your@email.com"
               required
               className="flex-1 px-4 py-3 rounded-xl border border-charcoal/15 text-charcoal text-sm focus:outline-none focus:border-rose"
             />
@@ -230,7 +228,7 @@ export default function ResultPage() {
               disabled={loading}
               className="px-6 py-3 bg-rose text-white font-medium rounded-xl hover:bg-rose/90 transition-colors disabled:opacity-50"
             >
-              {loading ? 'Sender…' : 'Ja takk!'}
+              {loading ? 'Sending…' : 'Yes please!'}
             </button>
           </form>
           {error && <p className="text-red-500 text-sm mt-3">{error}</p>}
@@ -239,25 +237,25 @@ export default function ResultPage() {
 
       {submitted && (
         <div className="bg-sage/20 rounded-2xl p-8 mb-8 text-center">
-          <p className="text-sage font-medium text-lg">✓ Sjekk innboksen din!</p>
-          <p className="text-charcoal/60 text-sm mt-1">5 tips er på vei til deg.</p>
+          <p className="text-sage font-medium text-lg">✓ Check your inbox!</p>
+          <p className="text-charcoal/60 text-sm mt-1">5 tips are on their way.</p>
         </div>
       )}
 
       {/* 7-day plan CTA */}
       <div className="text-center mb-12">
         <Link
-          href={`/result/${path.slug}/plan`}
+          href={`/result/${path.slug}/plan?path=${path.slug}`}
           className="inline-block px-8 py-4 bg-rose text-white font-medium rounded-xl hover:bg-rose/90 transition-colors"
         >
-          Se 7-dagers planen →
+          See the 7-day plan →
         </Link>
       </div>
 
       {/* Restart */}
       <div className="text-center">
         <Link href="/quiz" className="text-charcoal/40 text-sm hover:text-charcoal transition-colors">
-          Ta quizen på nytt
+          Take the quiz again
         </Link>
       </div>
     </main>

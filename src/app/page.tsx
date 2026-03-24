@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { getPaths } from '@/lib/engine'
 
-export default function HomePage() {
+export default function EnHomePage() {
   const paths = getPaths()
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -29,13 +29,13 @@ export default function HomePage() {
       })
       const data = await res.json()
       if (!res.ok) {
-        setError(data.error ?? 'Noe gikk galt.')
+        setError(data.error ?? 'Something went wrong.')
         return
       }
       localStorage.setItem('jewelry-subscribed', 'true')
       setSubmitted(true)
     } catch {
-      setError('Kunne ikke koble til. Prøv igjen.')
+      setError('Could not connect. Try again.')
     } finally {
       setLoading(false)
     }
@@ -45,22 +45,22 @@ export default function HomePage() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       <header className="text-center mb-16">
         <div className="flex justify-end mb-4">
-          <Link href="/en" className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
-            <span className="font-medium text-charcoal">NO</span> | EN
+          <Link href="/no" className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
+            <span className="font-medium text-charcoal">EN</span> | NO
           </Link>
         </div>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">
-          Start med smykkemaking
+          Start with jewelry making
         </h1>
         <p className="text-lg text-amber-700 max-w-xl mx-auto">
-          Velg din vei inn i smykkeverdenen. Vi viser deg hva du trenger, steg for steg.
+          Choose your path into the jewelry world. We'll show you what you need, step by step.
         </p>
         <div className="mt-8">
           <Link
             href="/quiz"
             className="inline-block px-8 py-4 bg-rose text-white font-medium rounded-xl hover:bg-rose/90 transition-colors"
           >
-            Få en anbefaling →
+            Get a recommendation →
           </Link>
         </div>
       </header>
@@ -69,17 +69,17 @@ export default function HomePage() {
       {!alreadySubscribed && !submitted && (
         <div className="bg-sage/10 rounded-2xl p-8 mb-12 text-center">
           <h3 className="font-serif font-bold text-charcoal text-xl mb-2">
-            Få 5 tips til ditt første smykkeprosjekt rett i innboksen
+            Get 5 tips for your first jewelry project in your inbox
           </h3>
           <p className="text-charcoal/60 text-sm mb-6">
-            Skrevet av noen som har laget samme feilene som deg.
+            Written by someone who's made the same mistakes as you.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="din@epost.no"
+              placeholder="your@email.com"
               required
               className="flex-1 px-4 py-3 rounded-xl border border-charcoal/15 text-charcoal text-sm focus:outline-none focus:border-rose"
             />
@@ -88,7 +88,7 @@ export default function HomePage() {
               disabled={loading}
               className="px-6 py-3 bg-rose text-white font-medium rounded-xl hover:bg-rose/90 transition-colors disabled:opacity-50"
             >
-              {loading ? 'Sender…' : 'Ja takk!'}
+              {loading ? 'Sending…' : 'Yes please!'}
             </button>
           </form>
           {error && <p className="text-red-500 text-sm mt-3">{error}</p>}
@@ -97,8 +97,8 @@ export default function HomePage() {
 
       {submitted && (
         <div className="bg-sage/20 rounded-2xl p-8 mb-12 text-center">
-          <p className="text-sage font-medium text-lg">✓ Sjekk innboksen din!</p>
-          <p className="text-charcoal/60 text-sm mt-1">5 tips er på vei til deg.</p>
+          <p className="text-sage font-medium text-lg">✓ Check your inbox!</p>
+          <p className="text-charcoal/60 text-sm mt-1">5 tips are on their way.</p>
         </div>
       )}
 
@@ -128,14 +128,14 @@ export default function HomePage() {
 
       <section className="mt-16 text-center">
         <p className="text-amber-700 text-sm">
-          Usikker på hva som passer deg?{' '}
+          Not sure what fits you?{' '}
           <Link href="/quiz" className="text-rose font-medium hover:underline">
-            Ta quizen →
+            Take the quiz →
           </Link>
         </p>
         <p className="text-amber-700 text-sm mt-3">
           <Link href="/blog" className="text-rose font-medium hover:underline">
-            Les bloggen →
+            Read the blog →
           </Link>
         </p>
       </section>

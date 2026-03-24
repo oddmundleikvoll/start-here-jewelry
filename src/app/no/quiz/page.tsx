@@ -3,14 +3,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import pathsData from '@/data/english/paths.json'
-import stepsData from '@/data/english/steps.json'
+import noPathsData from '@/data/no/paths.json'
+import noStepsData from '@/data/no/steps.json'
 import { Answers, recommendPath } from '@/lib/engine'
 
-const paths = (pathsData as any).paths as any[]
-const steps = (stepsData as any).steps as any[]
+const paths = (noPathsData as any).paths as any[]
+const steps = (noStepsData as any).steps as any[]
 
-export default function EnQuizPage() {
+export default function NoQuizPage() {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<Partial<Answers>>({})
   const router = useRouter()
@@ -36,7 +36,7 @@ export default function EnQuizPage() {
             path_id: matchingPath.slug,
           })
         }
-        router.push(`/en/result/${matchingPath.slug}?path=${matchingPath.slug}`)
+        router.push(`/no/result/${matchingPath.slug}?path=${matchingPath.slug}`)
       }
     } else {
       setCurrent(c => c + 1)
@@ -50,10 +50,10 @@ export default function EnQuizPage() {
       <div className="mb-10">
         <div className="flex justify-end mb-4">
           <Link href="/quiz" className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
-            <span className="font-medium text-charcoal">EN</span> | NO
+            NO | <span className="font-medium text-charcoal">EN</span>
           </Link>
         </div>
-        <div className="text-sm text-rose font-medium mb-2">Question {current + 1} of {steps.length}</div>
+        <div className="text-sm text-rose font-medium mb-2">Spørsmål {current + 1} av {steps.length}</div>
         <div className="w-full h-1 bg-charcoal/10 rounded-full">
           <div className="h-1 bg-rose rounded-full transition-all" style={{ width: `${progress}%` }} />
         </div>
@@ -84,7 +84,7 @@ export default function EnQuizPage() {
           onClick={() => setCurrent(c => c - 1)}
           className="mt-10 text-charcoal/40 text-sm hover:text-charcoal transition-colors"
         >
-          ← Back
+          ← Tilbake
         </button>
       )}
     </main>

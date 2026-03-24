@@ -2,60 +2,60 @@
 
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import pathsData from '@/data/paths.json'
+import enPathsData from '@/data/english/paths.json'
 
-const paths = pathsData.paths as any[]
+const enPaths = (enPathsData as any).paths as any[]
 
-const plans: Record<string, { title: string; description: string; tip: string }[]> = {
+const enPlans: Record<string, { title: string; description: string; tip: string }[]> = {
   beading: [
-    { title: 'Dag 1', description: 'Kjøp de 6 must-have produktene fra handlelisten. Velg apatitt-perler hvis du er usikker.', tip: 'Sammenlign priser på Beadworks og Panduro — ofte 20–30 kr forskjell.' },
-    { title: 'Dag 2', description: 'Sett opp arbeidsplassen: beading mat, tang, og en god lyskilde. Les deg opp på grunnleggende crimping på YouTube (2 videoer, maks 10 min).', tip: 'Følg «Beading for Beginners»-kanalen for engelsk, eller «Smykkedama» for norsk.' },
-    { title: 'Dag 3', description: 'Øv på å træ perler uten wire først. Føl hvordan perlene ligger. Kjenn om hullstørrelsen matcher din nål/wire.', tip: 'Ta deg tid — hastverk gir dårlige smykker.' },
-    { title: 'Dag 4', description: 'Lag ditt første armbånd. Start med 8–10 perler, fest med crimp beads, klem, og fest krok. Helhetlig tid: 20–30 min.', tip: 'Mål armbåndet mot håndleddet ditt før du klipper wire.' },
-    { title: 'Dag 5', description: 'Sjekk om armbåndet holder. Bruk tandem-metoden (to crimps) hvis du er usikker på styrken.', tip: 'Hvis det er for løst, klem crimps en gang til.' },
-    { title: 'Dag 6', description: 'Lag ditt første par øredobber. Velg 6–8 apatitt-perler per øredobb. Fest kroker med jump rings.', tip: 'Sjekk at jump rings er lukket skikkelig — dette er det vanligste feilpunktet.' },
-    { title: 'Dag 7', description: 'Gi bort ditt første smykke, eller ta bilde og legg ut på Instagram med #nybegynnersmykker. Skriv «Jeg lagde dette» — responsen overrasker deg.', tip: 'Følg 3–5 kontoer som poster lignende innhold. Dette er din gratis læringskanal.' },
+    { title: "Day 1", description: "Buy the 6 must-have products from the shopping list. Choose apatite beads if unsure.", tip: "Compare prices on Beadworks and Panduro \u2014 often 20\u201330 kr difference." },
+    { title: "Day 2", description: "Set up your workspace: beading mat, pliers, and good lighting. Learn the basics of crimping on YouTube (2 videos, max 10 min).", tip: "Follow \u201cBeading for Beginners\u201d channel for English content." },
+    { title: "Day 3", description: "Practice threading beads without wire first. Feel how the beads lie. Check if hole size matches your needle/wire.", tip: "Take your time \u2014 rushing makes bad jewelry." },
+    { title: "Day 4", description: "Make your first bracelet. Start with 8\u201310 beads, attach with crimp beads, crimp, and attach clasp. Total time: 20\u201330 min.", tip: "Measure the bracelet against your wrist before cutting wire." },
+    { title: "Day 5", description: "Check if the bracelet holds. Use the tandem method (two crimps) if unsure about strength.", tip: "If too loose, crimp the crimps again." },
+    { title: "Day 6", description: "Make your first pair of earrings. Choose 6\u20138 apatite beads per earring. Attach hooks with jump rings.", tip: "Check that jump rings are properly closed \u2014 this is the most common failure point." },
+    { title: "Day 7", description: "Give away your first piece of jewelry, or take a photo and post on Instagram with #beginnerjewelry. Write \u201cI made this\u201d \u2014 the response will surprise you.", tip: "Follow 3\u20135 accounts posting similar content. This is your free learning channel." },
   ],
-  'wire-wrapping': [
-    { title: 'Dag 1', description: 'Kjøp base wire (2 ruller), rundtang, flattang, og en pakke med rå steiner. Unngå sølvtråd nå.', tip: 'Verktøystål-wire (base wire) er best for nybegynnere — den er stiv nok til å holde fasong men myk nok til å vikle.' },
-    { title: 'Dag 2', description: 'Sett opp arbeidsplass. Les deg opp på grunnleggende wire wrapping på YouTube — søk «wire wrapping for beginners basics».', tip: 'Skap en Pinterest-board for inspirasjon. Samle 10 bilder av armbånd du liker.' },
-    { title: 'Dag 3', description: 'Prøv basis-teknikken: klipp 30 cm wire, lag en loop i enden med rundtang, vikle 3–4 ganger, klipp overskudd, flat til med flattang.', tip: 'Øv 5 ganger før du starter på steinen.' },
-    { title: 'Dag 4', description: 'Ta din første stein og prøv å vikle wire rundt den. Start med en rund eller oval stein — de er enklest. Bruk 45–60 cm wire.', tip: 'Hvis wire glir, bruk en dråpe grunnet lim på baksiden av steinen.' },
-    { title: 'Dag 5', description: 'Fullfør ditt første wire-wrapped armbånd. Fest en jump ring i hver ende. Bruk kjedetang hvis du har det.', tip: 'Ikke vær for hard med tangen — små merker i wire er ikke feil, det er karakter.' },
-    { title: 'Dag 6', description: 'Gjør armbåndet ferdig: klem alle ender, sjekk at det ikke er skarpe kanter, prøv det på.', tip: 'Kjør en fille over alle kanter — hvis det hekter, fil ned.' },
-    { title: 'Dag 7', description: 'Ta bilde, last opp, og delta i et wire-wrapping forum. Spør erfarne om tilbakemelding på din teknikk. Dette er gull verdt.', tip: 'To YouTube-kanaler som er verdt å følge: "Vintores Jewelry" og "Yvonne M" for europeisk/skandinavisk stil.' },
+  "wire-wrapping": [
+    { title: "Day 1", description: "Buy base wire (2 rolls), round-nose pliers, flat-nose pliers, and a pack of raw stones. Avoid silver wire for now.", tip: "Base wire (craft wire) is best for beginners \u2014 stiff enough to hold shape but soft enough to wrap." },
+    { title: "Day 2", description: "Set up your workspace. Learn the basics of wire wrapping on YouTube \u2014 search \u201cwire wrapping for beginners basics\u201d.", tip: "Create a Pinterest board for inspiration. Collect 10 images of bracelets you like." },
+    { title: "Day 3", description: "Practice the basic technique: cut 30 cm wire, make a loop at the end with round-nose pliers, wrap 3\u20134 times, cut excess, flatten with flat-nose pliers.", tip: "Practice 5 times before starting on the stone." },
+    { title: "Day 4", description: "Take your first stone and try wrapping wire around it. Start with a round or oval stone \u2014 they\u2019re easiest. Use 45\u201360 cm wire.", tip: "If wire slips, use a drop of craft glue on the back of the stone." },
+    { title: "Day 5", description: "Complete your first wire-wrapped bracelet. Attach a jump ring at each end. Use chain-nose pliers if you have them.", tip: "Don\u2019t be too hard with the pliers \u2014 small marks in wire aren\u2019t mistakes, they\u2019re character." },
+    { title: "Day 6", description: "Finish the bracelet: crimp all ends, check for sharp edges, try it on.", tip: "Run a cloth over all edges \u2014 if it catches, file it down." },
+    { title: "Day 7", description: "Take a photo, upload it, and participate in a wire-wrapping forum. Ask experienced makers for feedback on your technique. This is worth its weight in gold.", tip: "Two YouTube channels worth following: \u201cVintores Jewelry\u201d and \u201cYvonne M\u201d for European/Scandinavian style." },
   ],
-  'silver-curious': [
-    { title: 'Dag 1', description: 'Kjøp stempelverktøy-sett (med hammer og slagpute), ring-sylinder, og halvrundtang. Kjøp 15x15cm sterling silver plate fra en seriøs leverandør (sjekk norske Smykkedelen.no eller Hobby & Fritid).', tip: 'Kvalitet på silver plate varierer enormt. Kjøp ikke det billigste — sjekk at det er ekte 925 sterling.' },
-    { title: 'Dag 2', description: 'Sett opp et dedikert arbeidsområde — sørg for godt lys og ventilasjon. Les om stempling på YouTube: «stamping sterling silver for beginners».', tip: 'Ha en magnet tilgjengelig for å sjekke at sølvet ikke er magnetisk (det skal det ikke være).' },
-    { title: 'Dag 3', description: 'Prøv stempling på et papir først — de fleste bommer første gang. Test trykk og vinkel på sølvet før du slår hardt.', tip: 'Bruk en permanent markør til å merke opp teksten før du stempler —da ser du hvor bokstavene lander.' },
-    { title: 'Dag 4', description: 'Klipp ut din første ringstrimmel fra silver plate: 5mm bred, 8cm lang. Bruk sagblader — gå sakte og la bladet gjøre jobben.', tip: 'Fil alle kanter grundig før du bøyer. Skarpe kanter = ubehag.' },
-    { title: 'Dag 5', description: 'Bøy ringen rundt sylinderen. Bruk halvrundtang til å forme den rundt. Sett sammen endene — de skal møtes med 1mm mellomrom.', tip: 'Lodding kommer i neste runde. For nå holder du endene mot hverandre med fingrene.' },
-    { title: 'Dag 6', description: 'Stempl et enkelt mønster eller en bokstav. Slå med ett solid slag — ikke «bank», det lager ujevne merker. Polér med fint sandpapir (400 grit).', tip: 'Polering: start med 400, deretter 600, deretter 800. Jo finere slip, jo mer glans.' },
-    { title: 'Dag 7', description: 'Prøv ringen på. Sett den på sylinderen for å finjustere størrelsen. Hvis for stor, klem forsiktig med flattang. Skriv «Dag 7»-notat i en bok om hva du lærte.', tip: 'Du har akkurat laget din første sølvring. Dette er et skikkelig håndverk. Skryt av deg selv.' },
+  "silver-curious": [
+    { title: "Day 1", description: "Buy a stamping tool set (with hammer and striking pad), ring mandrel, and half-round pliers. Buy 15\u00d715cm sterling silver sheet from a reputable supplier.", tip: "Sterling silver sheet quality varies enormously. Don\u2019t buy the cheapest \u2014 check that it\u2019s genuine 925 sterling." },
+    { title: "Day 2", description: "Set up a dedicated workspace \u2014 ensure good lighting and ventilation. Learn about stamping on YouTube: \u201cstamping sterling silver for beginners\u201d.", tip: "Have a magnet available to check that the silver isn\u2019t magnetic (it shouldn\u2019t be)." },
+    { title: "Day 3", description: "Practice stamping on paper first \u2014 most people miss the first time. Test pressure and angle on the silver before striking hard.", tip: "Use a permanent marker to mark the text before stamping \u2014 then you can see where the letters will land." },
+    { title: "Day 4", description: "Cut out your first ring strip from silver sheet: 5mm wide, 8cm long. Use saw blades \u2014 go slowly and let the blade do the job.", tip: "File all edges thoroughly before bending. Sharp edges = discomfort." },
+    { title: "Day 5", description: "Bend the ring around the mandrel. Use half-round pliers to shape it round. Bring the ends together \u2014 they should meet with 1mm gap.", tip: "Soldering comes next round. For now, hold the ends together with your fingers." },
+    { title: "Day 6", description: "Stamp a simple pattern or letter. Strike with one solid blow \u2014 don\u2019t \u201chammer\u201d, it creates uneven marks. Polish with fine sandpaper (400 grit).", tip: "Polishing: start with 400, then 600, then 800. The finer the sandpaper, the more shine." },
+    { title: "Day 7", description: "Try the ring on. Place it on the mandrel to fine-tune the size. If too big, gently squeeze with flat-nose pliers. Write \u201cDay 7\u201d note in a journal about what you learned.", tip: "You just made your first silver ring. This is real craftsmanship. Be proud of yourself." },
   ],
 }
 
-export default function PlanPage() {
+export default function EnPlanPage() {
   const searchParams = useSearchParams()
-  const pathSlug = searchParams.get('path') || 'beading-starter'
-  const path = paths.find(p => p.slug === pathSlug) || paths[0]
-  const plan = plans[path.id] || plans.beading
+  const pathSlug = searchParams.get("path") || "beading-starter"
+  const path = enPaths.find(p => p.slug === pathSlug) || enPaths[0]
+  const plan = enPlans[path.id] || enPlans.beading
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12">
       <div className="flex justify-between items-center mb-8">
         <Link href={`/result/${path.slug}`} className="text-charcoal/40 text-sm hover:text-charcoal transition-colors">
-          ← Tilbake til resultat
+          ← Back to result
         </Link>
-        <Link href={`/en/result/${path.slug}/plan`} className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
-          <span className="font-medium text-charcoal">NO</span> | EN
+        <Link href={`/no/result/${path.slug}/plan`} className="text-sm text-charcoal/40 hover:text-charcoal transition-colors">
+          <span className="font-medium text-charcoal">EN</span> | NO
         </Link>
       </div>
 
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-2">
-          7-dagers plan
+          7-day plan
         </h1>
         <p className="text-charcoal/60">{path.title}</p>
       </div>
@@ -70,7 +70,7 @@ export default function PlanPage() {
               <h3 className="font-serif font-bold text-charcoal mb-1">{day.title}</h3>
               <p className="text-charcoal/70 text-sm leading-relaxed mb-3">{day.description}</p>
               <div className="text-xs text-sage font-medium bg-sage/10 rounded-lg px-3 py-2">
-                💡 {day.tip}
+                \ud83d\udca1 {day.tip}
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function PlanPage() {
           href="/quiz"
           className="text-charcoal/40 text-sm hover:text-charcoal transition-colors"
         >
-          Ta quizen igjen
+          Take the quiz again
         </Link>
       </div>
     </main>
