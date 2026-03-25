@@ -58,11 +58,22 @@ export function getProductsForPath(pathId: string) {
   return { mustHave, niceToHave, avoid }
 }
 
-export function estimateCost(pathId: string): string {
-  const { mustHave, niceToHave } = getProductsForPath(pathId)
-  const mustCost = mustHave.reduce((sum, p) => {
-    const [lo, hi] = p.price_nok.split('-').map((s: string) => parseInt(s.replace(/\D/g, '')))
-    return sum + (lo || 0)
-  }, 0)
-  return `${mustCost}+ kr`
+export function estimateCost(pathId: string, lang: 'en' | 'no' = 'no'): string {
+  const { mustHave } = getProductsForPath(pathId)
+  if (lang === 'en') {
+    // Sum low end of USD price bands (strip $ and +)
+    const mustCost = mustHave.reduce((sum: number, p: any) => {
+      const raw = (p.price_usd || p.price_nok).replace(/[^0-9]/g, '')
+      const num = parseInt(raw) || 0
+      return sum + num
+    }, 0)
+    return `$${mustCost}+`
+  } else {
+    // Norwegian: sum low end of NOK price bands
+    const mustCost = mustHave.reduce((sum: number, p: any) => {
+      const [lo] = p.price_nok.split('-').map((s: string) => parseInt(s.replace(/\D/g, '')))
+      return sum + (lo || 0)
+    }, 0)
+    return `${mustCost}+ kr`
+  }
 }

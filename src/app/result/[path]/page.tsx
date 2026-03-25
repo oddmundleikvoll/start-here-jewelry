@@ -13,7 +13,7 @@ export default function EnResultPage() {
   const pathSlug = searchParams.get('path') || 'beading-starter'
   const path = enPaths.find(p => p.slug === pathSlug) || enPaths[0]
   const { mustHave, niceToHave, avoid } = getProductsForPath(path.id)
-  const cost = estimateCost(path.id)
+  const cost = estimateCost(path.id, 'en')
 
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -121,8 +121,8 @@ export default function EnResultPage() {
           {mustHave.map(p => (
             <div key={p.id} className="flex items-start justify-between bg-white rounded-xl px-5 py-4 border border-charcoal/5">
               <div>
-                <div className="font-medium text-charcoal">{p.name}</div>
-                <div className="text-sm text-charcoal/60 mt-0.5">{p.why}</div>
+                <div className="font-medium text-charcoal">{p.name_en || p.name}</div>
+                <div className="text-sm text-charcoal/60 mt-0.5">{p.why_en || p.why}</div>
                 {p.affiliateUrl && (
                   <a
                     href={p.affiliateUrl}
@@ -137,7 +137,7 @@ export default function EnResultPage() {
                   </a>
                 )}
               </div>
-              <div className="text-rose font-medium text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
+              <div className="text-rose font-medium text-sm whitespace-nowrap ml-4">{p.price_usd}</div>
             </div>
           ))}
         </div>
@@ -151,8 +151,8 @@ export default function EnResultPage() {
             {niceToHave.map(p => (
               <div key={p.id} className="flex items-start justify-between bg-white rounded-xl px-5 py-4 border border-charcoal/5">
                 <div>
-                  <div className="font-medium text-charcoal">{p.name}</div>
-                  <div className="text-sm text-charcoal/60 mt-0.5">{p.why}</div>
+                  <div className="font-medium text-charcoal">{p.name_en || p.name}</div>
+                  <div className="text-sm text-charcoal/60 mt-0.5">{p.why_en || p.why}</div>
                   {p.affiliateUrl && (
                     <a
                       href={p.affiliateUrl}
@@ -167,7 +167,7 @@ export default function EnResultPage() {
                     </a>
                   )}
                 </div>
-                <div className="text-charcoal/40 text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
+                <div className="text-charcoal/40 text-sm whitespace-nowrap ml-4">{p.price_usd}</div>
               </div>
             ))}
           </div>
@@ -182,8 +182,8 @@ export default function EnResultPage() {
             {avoid.map(p => (
               <div key={p.id} className="flex items-start justify-between bg-red-50 rounded-xl px-5 py-4 border border-red-100">
                 <div>
-                  <div className="font-medium text-charcoal">{p.name}</div>
-                  <div className="text-sm text-red-600/80 mt-0.5">{p.why}</div>
+                  <div className="font-medium text-charcoal">{p.name_en || p.name}</div>
+                  <div className="text-sm text-red-600/80 mt-0.5">{p.why_en || p.why}</div>
                   {p.affiliateUrl && (
                     <a
                       href={p.affiliateUrl}
@@ -198,7 +198,7 @@ export default function EnResultPage() {
                     </a>
                   )}
                 </div>
-                <div className="text-red-400 text-sm whitespace-nowrap ml-4">{p.price_nok} kr</div>
+                <div className="text-red-400 text-sm whitespace-nowrap ml-4">{p.price_usd}</div>
               </div>
             ))}
           </div>

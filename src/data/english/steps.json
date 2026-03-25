@@ -5,9 +5,9 @@
       "question": "What's your budget for tools and materials?",
       "subtitle": "Choose what feels right for you right now.",
       "options": [
-        { "value": "low", "label": "Under 500 kr", "description": "Easy and affordable entry" },
-        { "value": "medium", "label": "500–1500 kr", "description": "Good balance" },
-        { "value": "high", "label": "1500+ kr", "description": "Ready for a real investment" }
+        { "value": "low", "label": "Under $50", "description": "Easy and affordable entry" },
+        { "value": "medium", "label": "$50–150", "description": "Good balance" },
+        { "value": "high", "label": "$150+", "description": "Ready for a real investment" }
       ]
     },
     {
