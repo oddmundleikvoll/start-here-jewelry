@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+// Force dynamic to prevent static caching - ensure fresh env vars on each request
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY;
   const audienceId = process.env.RESEND_AUDIENCE_ID;
