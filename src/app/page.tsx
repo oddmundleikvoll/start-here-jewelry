@@ -25,7 +25,7 @@ export default function EnHomePage() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale: "en" }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -33,6 +33,7 @@ export default function EnHomePage() {
         return
       }
       localStorage.setItem('jewelry-subscribed', 'true')
+      localStorage.setItem('jewelry-email', email)
       setSubmitted(true)
     } catch {
       setError('Could not connect. Try again.')
@@ -69,10 +70,10 @@ export default function EnHomePage() {
       {!alreadySubscribed && !submitted && (
         <div className="bg-sage/10 rounded-2xl p-8 mb-12 text-center">
           <h3 className="font-serif font-bold text-charcoal text-xl mb-2">
-            Get 5 tips for your first jewelry project in your inbox
+            Get your personal jewelry start-plan in your inbox
           </h3>
           <p className="text-charcoal/60 text-sm mb-6">
-            Written by someone who's made the same mistakes as you.
+            We show you which tools you need, which projects fit you best, and give you a 7-day plan that takes you from zero to your first piece of jewelry.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input

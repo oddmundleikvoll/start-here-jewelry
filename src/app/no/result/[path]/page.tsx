@@ -24,7 +24,17 @@ export default function NoResultPage() {
   useEffect(() => {
     const sub = localStorage.getItem('jewelry-subscribed')
     if (sub === 'true') setAlreadySubscribed(true)
-  }, [])
+
+    // Track path with any previously captured email
+    const storedEmail = localStorage.getItem('jewelry-email')
+    if (storedEmail && pathSlug) {
+      fetch('/api/subscribe-path', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: storedEmail, path: pathSlug }),
+      }).catch(console.error)
+    }
+  }, [pathSlug])
 
   async function handleSubscribe(e: React.FormEvent) {
     e.preventDefault()
@@ -42,6 +52,7 @@ export default function NoResultPage() {
         return
       }
       localStorage.setItem('jewelry-subscribed', 'true')
+      localStorage.setItem('jewelry-email', email)
       setSubmitted(true)
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'email_capture', {

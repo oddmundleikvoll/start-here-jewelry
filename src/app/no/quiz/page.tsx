@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import noPathsData from '@/data/no/paths.json'
@@ -35,6 +35,15 @@ export default function NoQuizPage() {
             event_category: 'engagement',
             path_id: matchingPath.slug,
           })
+        }
+        // Send email+path to Resend if email was captured earlier
+        const storedEmail = localStorage.getItem('jewelry-email')
+        if (storedEmail) {
+          fetch('/api/subscribe-path', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: storedEmail, path: matchingPath.slug }),
+          }).catch(console.error)
         }
         router.push(`/no/result/${matchingPath.slug}?path=${matchingPath.slug}`)
       }

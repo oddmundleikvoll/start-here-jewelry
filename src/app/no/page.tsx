@@ -25,7 +25,7 @@ export default function NoHomePage() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale: "no" }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -33,6 +33,7 @@ export default function NoHomePage() {
         return
       }
       localStorage.setItem('jewelry-subscribed', 'true')
+      localStorage.setItem('jewelry-email', email)
       setSubmitted(true)
     } catch {
       setError('Kunne ikke koble til. Prøv igjen.')
@@ -69,10 +70,10 @@ export default function NoHomePage() {
       {!alreadySubscribed && !submitted && (
         <div className="bg-sage/10 rounded-2xl p-8 mb-12 text-center">
           <h3 className="font-serif font-bold text-charcoal text-xl mb-2">
-            Få 5 tips til ditt første smykkeprosjekt rett i innboksen
+            Få din personlige smykkestart-plan i innboksen
           </h3>
           <p className="text-charcoal/60 text-sm mb-6">
-            Skrevet av noen som har laget samme feilene som deg.
+            Vi viser deg hvilke verktøy du trenger, hvilke prosjekter som passer for akkurat deg, og gir deg en 7-dagers plan som tar deg fra null til ditt første smykke.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
